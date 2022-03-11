@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+
+import axios from 'axios';
+import { useEffect, useState, UseState } from 'react';
 import './App.css';
 
 function App() {
+  const [horoscope, setHoroscope] = useState({});
+  useEffect(() => {
+    axios({
+      url: 'https://aztro.sameerkumar.website/',
+      method: 'POST',
+      responseType: 'json',
+      params: {
+        sign: 'Aries',
+        day: 'tomorrow'
+      }
+    }).then((response) => {
+
+      console.log(response);
+  })
+},[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Horoscope</h1>
     </div>
   );
 }
