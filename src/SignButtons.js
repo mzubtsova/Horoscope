@@ -2,13 +2,15 @@
 import { useState } from 'react';
 
 import HoroscopeResults from "./HoroscopeResults";
+// import DayOptions from './DayOptios';
+
 
 
 function SignButtons(props) {
-    const [userChoice, setUserChoice] = useState(props.userChoice);
+    const [userChoice, setUserChoice] = useState(false);
     const handleSignSelection = (event) => {
         props.handleSignSelection(event.target.id)
-        console.log(event.target.id);
+        setUserChoice(true)
     }
     return (
         <section>
@@ -27,7 +29,7 @@ function SignButtons(props) {
                 <button className="pisces" id="pisces" onClick={handleSignSelection}>Pisces</button>
             </div>
             <div className="results">
-                <HoroscopeResults />
+                <HoroscopeResults signChosen={userChoice}/>
             </div>
         </section>
     )

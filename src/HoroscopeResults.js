@@ -1,9 +1,13 @@
-// HoroscopeResults.js
+// displying results on the page
 
 
-function HoroscopeResults() {
+function HoroscopeResults({getHoroscope}) {
+    console.log(getHoroscope);
     return (
-        <h1>Result will go here</h1>
-    )
-}
+        <div>
+                { getHoroscope? <p> {getHoroscope.color} </p> : null}
+       
+       </div>
+    );
+};
 export default HoroscopeResults;
