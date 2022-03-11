@@ -5,6 +5,7 @@ import './App.css';
 import DayOptions from './DayOptios';
 import HoroscopeResults from './HoroscopeResults';
 import SignButtons from './SignButtons';
+import Footer from './Footer';
 
 function App(props) {
   const [horoscope, setHoroscope] = useState([]);
@@ -44,6 +45,7 @@ function App(props) {
       <SignButtons handleSignSelection={signSelection} />
       {userChoice ? <DayOptions handleDateSelection={dateSelection} /> : null}
       <HoroscopeResults getHoroscope={horoscope}/>
+      <Footer />
     </>
 
   );
