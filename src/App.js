@@ -6,6 +6,7 @@ import DayOptions from './DayOptios';
 import HoroscopeResults from './HoroscopeResults';
 import SignButtons from './SignButtons';
 import Footer from './Footer';
+import Header from './Header';
 
 function App(props) {
   const [horoscope, setHoroscope] = useState([]);
@@ -37,16 +38,16 @@ function App(props) {
   }, [userChoice, dateChoice])
   console.log(userChoice, dateChoice, horoscope)
   return (
-    <>
-      <div>
-        <h1>Horoscope</h1>
-      </div>
-      
+    <div className="app">
+      <div className="wrapper">
+      <Header />
+
       <SignButtons handleSignSelection={signSelection} />
       {userChoice ? <DayOptions handleDateSelection={dateSelection} /> : null}
       <HoroscopeResults getHoroscope={horoscope}/>
       <Footer />
-    </>
+      </div>
+    </div>
 
   );
 }

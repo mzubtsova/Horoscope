@@ -1,38 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:ital,wght@0,300;1,600&display=swap');
+
+html{
+  font-size: 125%;
+    padding: 0;
+    margin: 0;
+    color: #fffacd;
+    background-image: url(../assets/1113864.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+.wrapper{
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
 .App {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.header{
   text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+.paragraph{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  padding-bottom: 60px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  background-color: rgba(144,181,248,.295);
+  padding: 20px 0;
+
 }
 
-.App-link {
-  color: #61dafb;
+#aries,
+#taurus,
+#gemini,
+#cancer,
+#leo,
+#virgo,
+#libra,
+#scorpio,
+#sagittarius,
+#capricorn,
+#aquarius,
+#pisces{
+height: 120px;
+padding-top: 32px;
+width: 210px;
+text-align: center;
+/* width: calc(100%/4); */
+display: flex;
+flex-direction: column;
+margin:10px;
+background-color: rgba(144,181,248,.295);
+text-transform: uppercase;
+border-radius: 0.8rem;
+color: #fffacd;
+font-size: 20px;
+font-family: 'Montserrat', sans-serif;
+}
+.br{
+  text-align: center;
+  padding-left: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
