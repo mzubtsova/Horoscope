@@ -27,9 +27,9 @@ function SignButtons(props) {
                 <button className="cancer" id="cancer" onClick={handleSignSelection}>Cancer
                 <br />JUN 22 - JUL 22
                 </button>
-                <button className="leo" id="leo" onClick={handleSignSelection}>
+                <button className="leo" id="leo" onClick={handleSignSelection}>Leo
                     <br />JUL23 - AUG 22
-                    Leo</button>
+                    </button>
                 <button className="virgo" id="virgo" onClick={handleSignSelection}>Virgo
                 <br />AUG 23 - SEP 22
                 </button>
@@ -49,7 +49,7 @@ function SignButtons(props) {
                 <br />JAN 20 - FEB 18
                 </button>
                 <button className="pisces" id="pisces" onClick={handleSignSelection}>Pisces
-                FEB 19 - MAR 20
+                    <br />FEB 19 - MAR 20
                 </button>
             </div>
             <div className="results">

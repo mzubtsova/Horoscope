@@ -6,10 +6,12 @@ function DayOptions(props){
         // console.log(event.target.id);
     }
     return(
-        <div>
+        <div className="dayOptions">
+            <div className="wrapper">
             <button className="yesterday" id="yesterday" onClick={handleDateSelection}>Yesterday</button>
             <button className="today" id="today" onClick={handleDateSelection}>Today</button>
             <button className="tomorrow" id="tomorrow" onClick={handleDateSelection}>Tomorrow</button>
+            </div>
         </div>
     )
 }

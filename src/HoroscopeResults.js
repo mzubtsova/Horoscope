@@ -4,13 +4,15 @@
 function HoroscopeResults({getHoroscope}) {
     console.log(getHoroscope);
     return (
-        <div>
+        <div className="resultsSection">
+            <div className="wrapper">
             {getHoroscope ? <p> {getHoroscope.description} </p> : null}
-            { getHoroscope? <p>COLOUR: {getHoroscope.color} </p> : null}
-            {getHoroscope ? <p>COMPATIBILITY: {getHoroscope.compatibility} </p> : null}
-            {getHoroscope ? <p>MOOD: {getHoroscope.mood} </p> : null}
-            {getHoroscope ? <p>LUCKY NUMBER: {getHoroscope.lucky_number} </p> : null}
-            {getHoroscope ? <p>LUCKY TIME: {getHoroscope.lucky_time} </p> : null}
+            { getHoroscope? <p>Lucky colour: {getHoroscope.color} </p> : null}
+            {getHoroscope ? <p>Compatibility: {getHoroscope.compatibility} </p> : null}
+            {getHoroscope ? <p>Your mood: {getHoroscope.mood} </p> : null}
+            {getHoroscope ? <p>Lucky number: {getHoroscope.lucky_number} </p> : null}
+            {getHoroscope ? <p>Lucky time: {getHoroscope.lucky_time} </p> : null}
+            </div>
        
        </div>
     );
