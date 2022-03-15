@@ -21,6 +21,13 @@ html{
    flex-wrap: wrap;
    justify-content: center;
 }
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+ul {
+  list-style: none;
+}
 .header{
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -36,7 +43,8 @@ html{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgba(20, 42, 87, 0.295);
+  background-color: rgba(4, 7, 12, 0.295);
+  padding-top: 40px;
 
 }
 
@@ -59,7 +67,7 @@ text-align: center;
 display: flex;
 flex-direction: column;
 margin:15px;
-background-color: rgba(20, 42, 87, 0.295);
+background-color: rgba(4, 7, 12, 0.295);
 text-transform: uppercase;
 border-radius: 0.3rem;
 color: whitesmoke;
@@ -72,7 +80,7 @@ border: 1px solid whitesmoke;
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(20, 42, 87, 0.295);
+  background-color: rgba(4, 7, 12, 0.295);
   padding: 20px 0;
 }
 #yesterday,
@@ -85,12 +93,12 @@ border: 1px solid whitesmoke;
   margin: 7px;
   color: whitesmoke;
   border-radius: 0.3rem;
-  background-color: rgba(20, 42, 87, 0.295);
+  background-color: rgba(4, 7, 12, 0.295);
   font-size: 23px;
 }
 
 .resultsSection{
-  background-color: rgba(26, 35, 53, 0.295);
+  background-color: rgba(4, 7, 12, 0.295);
   padding: 20px 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 25px;
@@ -102,6 +110,9 @@ padding-top: 10px;
 font-family: 'Raleway', sans-serif;
 font-size: 20px;
 text-align: center;
+}
+ul{
+  text-align: center;
 }
 .buttons span{
   margin-top: 10px;
