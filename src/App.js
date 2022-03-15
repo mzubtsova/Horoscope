@@ -19,7 +19,7 @@ function App(props) {
     setDateChoice(date)
   }
   useEffect(() => {
-    if (userChoice != '' && dateChoice != '') {
+    if (userChoice != '' && dateChoice !== '') {
       axios({
         url: 'https://aztro.sameerkumar.website/',
         method: 'POST',
