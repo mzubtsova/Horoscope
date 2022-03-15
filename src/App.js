@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import './App.css';
+import DayOptions from './DayOptios';
+import HoroscopeResults from './HoroscopeResults';
+import SignButtons from './SignButtons';
+import Footer from './Footer';
+import Header from './Header';
+
+function App(props) {
+  const [horoscope, setHoroscope] = useState([]);
+  const [userChoice, setUserChoice] = useState('');
+  const [dateChoice, setDateChoice] = useState('');
+  const signSelection = (sign) => {
+    setUserChoice(sign)
+  }
+  const dateSelection = (date) => {
+    setDateChoice(date)
+  }
+  useEffect(() => {
+    if (userChoice != '' && dateChoice != '') {
+      axios({
+        url: 'https://aztro.sameerkumar.website/',
+        method: 'POST',
+        responseType: 'json',
+        params: {
+          sign: userChoice,
+          day: dateChoice
+        }
+
+      })
+        .then(response => {
+          console.log(response.data);
+           setHoroscope(response.data)
+        })
+    }
+  }, [userChoice, dateChoice])
+  console.log(userChoice, dateChoice, horoscope)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="wrapper">
+      <Header />
+
+      <SignButtons handleSignSelection={signSelection} />
+      {userChoice ? <DayOptions handleDateSelection={dateSelection} /> : null}
+      <HoroscopeResults getHoroscope={horoscope}/>
+      <Footer />
+      </div>
     </div>
+
   );
 }
 
