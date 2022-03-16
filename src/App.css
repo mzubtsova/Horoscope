@@ -120,6 +120,89 @@ ul{
   font-size: 18px;
 }
 
+#aries:hover,
+#aries:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#taurus:hover,
+#taurus:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#gemini:hover,
+#gemini:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+
+#cancer:hover,
+#cancer:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#leo:hover,
+#leo:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#virgo:hover,
+#virgo:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#libra:hover,
+#libra:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#scorpio:hover,
+#scorpio:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#sagittarius:hover,
+#sagittarius:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#capricorn:hover,
+#capricorn:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#aquarius:hover,
+#aquarius:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#pisces:hover,
+#pisces:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#yesterday:hover,
+#yesterday:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+
+#yesterday:hover,
+#yesterday:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#today:hover,
+#today:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+#tomorrow:hover,
+#tomorrow:focus{
+  background-color: rgba(11, 38, 85, 0.295);
+  border:2px solid whitesmoke;
+}
+
 @media (max-width: 700px){
   .buttons{
     padding: 0;
