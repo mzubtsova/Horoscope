@@ -12,12 +12,17 @@ function App(props) {
   const [horoscope, setHoroscope] = useState([]);
   const [userChoice, setUserChoice] = useState('');
   const [dateChoice, setDateChoice] = useState('');
+  const [horoscopeResult, setHoroscopeResult] = useState(false);
+  
   const signSelection = (sign) => {
     setUserChoice(sign)
+    setHoroscopeResult(false)
   }
   const dateSelection = (date) => {
     setDateChoice(date)
+    setHoroscopeResult(true)
   }
+
   useEffect(() => {
     if (userChoice !== '' && dateChoice !== '') {
       axios({
@@ -43,8 +48,18 @@ function App(props) {
       <Header />
 
       <SignButtons handleSignSelection={signSelection} />
-      {userChoice ? <DayOptions handleDateSelection={dateSelection} /> : null}
-      <HoroscopeResults getHoroscope={horoscope}/>
+      {userChoice 
+        ? <DayOptions handleDateSelection={dateSelection} /> 
+        : null}
+        {horoscopeResult
+          ? <HoroscopeResults getHoroscope={horoscope} />
+        :null
+        }
+
+      
+        {/* <HoroscopeResults getHoroscope={horoscope} /> */}
+       
+      
       <Footer />
       </div>
     </div>

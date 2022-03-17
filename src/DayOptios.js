@@ -1,9 +1,11 @@
 // getting data depending on user's choice
 
 function DayOptions(props){
+
     const handleDateSelection = (event) => {
+        console.log(event);
         props.handleDateSelection(event.target.id)
-        // console.log(event.target.id);
+        props.horoscopeOption();
     }
     return(
         <div className="dayOptions">
